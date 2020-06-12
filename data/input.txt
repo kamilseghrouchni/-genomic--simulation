@@ -1,0 +1,100 @@
+# DATA INPUT FILE
+# Note: lines starting with '#' are comments
+
+
+# GENERAL PARAMETERS:
+
+# Number of generations _ corresponds to the number of steps in each simulation
+GEN = 3000
+
+# Number of replicas _ corresponds to the number of executed simulations
+REP = 500
+
+# Marker Sites _ zero-based loci corresponding to the alleles (sequence of nucleotides)
+SITES = 0|6
+
+# Population size _ this value is only used if no fasta file is specified
+POPSIZE = 5000
+
+# Initial frequencies _ this value is only used if no fasta file is specified
+FREQ = 0.8|0.2
+
+
+# Execution mode: vars are
+# 0 - none
+# 1 - mutation
+# 2 - migration
+# 3 - selection
+# 4 - variable population size
+MODE = 0
+
+
+# MUTATION PARAMETERS
+
+# Mutation probabilities for each of the marker sites
+MUT = 1E-7|1E-7|1E-7
+
+# Mutation model (Cantor model is chosen by default if no other model is picked)
+
+# Uncomment the following line to use the Kimura mutation model
+# MUT_KIMURA = 0.5
+
+# Uncomment the following line to use the Felsenstein mutation model
+# The rates are in the order 'A', 'C', 'G', 'T'
+# MUT_FELSENSTEIN = 0.3|0.2|0.2|0.3
+
+
+
+# MIGRATION PARAMETERS
+# Note: the subpopulations are created such that there are exactly as many subpopulations as there are alleles,
+# with each subpopulation containing only one allele at the beginning of the simulation
+
+# If detailed output is activated (= 1), the each subpopulations' allele frequencies are printed to the result file,
+# otherwise (= 0) only the global (seen from the total population) frequencies are printed 
+MIG_DETAILED_OUTPUT = 0
+
+# Migration patterns: Exchange of individuals amongst sub population
+# 1 - completeGraph _ every sub population exchanges with one another
+# 2 - star _ every sub population exchanges with the central population, which is chosen randomly
+# 3 - ring _ every sub population exchanges with their neighbours
+MIG_MODEL = 1
+
+# Migration rates for each subpopulation:
+# One value applies for every migration from and to a subpopulation
+# Example: 3|5|4
+# -> the subpopulation 1 will exchange 3 individuals with subpopulation 2, 3 individuals with subpopulation 3, 3 individuals with subpopulation 4
+# -> the subpopulation 2 will exchange 5 individuals with subpopulation 3, 5 individuals with subpopulation 4
+# -> the subpopulation 3 will exchange 4 individuals with subpopulation 4
+
+# Note
+# - If there are less rates than subpopulations, a migration rate of 0 is automatically chosen for the exchange between those additional subpopulations
+# - If the rates are too high (e.g. an exchange of 10 individuals each with 2 other subpops when there are only 15 individuals in a given subpop), they will automatically be adjusted downwards
+# - If no values are specified, random rates will be determined for every subpopulation
+# MIG_RATES = 3|5
+
+
+
+# SELECTION PARAMETERS
+
+# Selection rates for each allele
+# Note: values are to be in the range [-1, infinity[, with -1 representing a lethal allele
+# Note: if there are more alleles than given values, those additional alleles will have a neutral selection factor of 0
+SEL = -0.1|0.1
+
+
+
+# VARIABLE POPULATION SIZE PARAMETERS
+# The effect takes place between two time points
+# The user can specify a factor by which the population is reduced during this interval
+
+# Bottleneck execution mode:
+# Reduction _ reduction factor
+# Start _ start time of the effect
+# End _ end time of the effect
+POP_REDUCTION = 2.0
+POP_START = 20
+POP_END = 60
+
+
+
+

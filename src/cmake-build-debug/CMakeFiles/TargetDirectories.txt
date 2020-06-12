@@ -1,0 +1,3 @@
+/Users/kamilseghrouchni/Desktop/Team_4/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kamilseghrouchni/Desktop/Team_4/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kamilseghrouchni/Desktop/Team_4/src/cmake-build-debug/CMakeFiles/src.dir

@@ -1,0 +1,40 @@
+# DATA INPUT FILE
+
+# Number of generations
+GEN = 3000
+
+# Number of replicas
+REP = 500
+
+# Marker Sites
+SITES = 0|1|2|3
+
+# Bottleneck
+POP_REDUCTION = 2.0
+POP_START = 20
+POP_END = 40
+
+# Execution mode: vars are
+# 0 - none
+# 1 - mutation
+# 2 - migration
+# 3 - selection
+# 4 - variable population size
+MODE = 2
+
+# Migration models: vars are
+# 0 - completeGraph
+# 1 - star
+# 2 - ring
+MIG_MODEL = 2
+
+# Migration rates for each subpopulation:
+MIG_RATES = 3|5
+
+# Mutation probabilities for each site
+MUT = 1E-8|1E-8|1E-8|1E-8
+MUT_KIMURA = 0.5
+MUT_FELSENSTEIN = 0.25|0.25|0.2|0.3
+
+# Selection rates for each allele
+SEL = 0.1|-0.8

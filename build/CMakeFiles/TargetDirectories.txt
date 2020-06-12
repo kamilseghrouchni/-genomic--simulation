@@ -1,0 +1,5 @@
+/Users/kamilseghrouchni/Desktop/BA3/Info/Team_4/build/CMakeFiles/rebuild_cache.dir
+/Users/kamilseghrouchni/Desktop/BA3/Info/Team_4/build/CMakeFiles/edit_cache.dir
+/Users/kamilseghrouchni/Desktop/BA3/Info/Team_4/build/CMakeFiles/test.dir
+/Users/kamilseghrouchni/Desktop/BA3/Info/Team_4/build/CMakeFiles/testMyProg.dir
+/Users/kamilseghrouchni/Desktop/BA3/Info/Team_4/build/CMakeFiles/Genetics.dir
